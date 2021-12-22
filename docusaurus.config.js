@@ -44,11 +44,6 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'docs/write-your-own-framework/one/framework-one',
-          label: '书籍小册',
-          position: 'right',
-        },
-        {
           to: 'docs/resources/resources-intro',
           label: '资源整理',
           position: 'right',
