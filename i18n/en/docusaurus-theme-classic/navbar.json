@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Jiuran",
+    "description": "The title in the navbar"
+  },
+  "item.label.博客": {
+    "message": "Blog",
+    "description": "Navbar item with label 博客"
+  },
+  "item.label.算法": {
+    "message": "Algorithm",
+    "description": "Navbar item with label 算法"
+  },
+  "item.label.React源码": {
+    "message": "React",
+    "description": "Navbar item with label React源码"
+  },
+  "item.label.资源整理": {
+    "message": "Resources",
+    "description": "Navbar item with label 资源整理"
+  },
+  "item.label.B站": {
+    "message": "Billbill",
+    "description": "Navbar item with label B站"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Javascript": {
+    "message": "Javascript",
+    "description": "Navbar item with label Javascript"
+  }
+}

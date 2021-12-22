@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.resources.category.简介": {
+    "message": "简介",
+    "description": "The label for category 简介 in sidebar resources"
+  },
+  "sidebar.resources.category.前端开发": {
+    "message": "前端开发",
+    "description": "The label for category 前端开发 in sidebar resources"
+  },
+  "sidebar.algorithm.category.二叉树": {
+    "message": "二叉树",
+    "description": "The label for category 二叉树 in sidebar algorithm"
+  },
+  "sidebar.algorithm.category.动态规划": {
+    "message": "动态规划",
+    "description": "The label for category 动态规划 in sidebar algorithm"
+  },
+  "sidebar.algorithm.category.手写函数": {
+    "message": "手写函数",
+    "description": "The label for category 手写函数 in sidebar algorithm"
+  },
+  "sidebar.react.category.React": {
+    "message": "React",
+    "description": "The label for category React in sidebar react"
+  },
+  "sidebar.react.category.Redux": {
+    "message": "Redux",
+    "description": "The label for category Redux in sidebar react"
+  },
+  "sidebar.react.category.ReactRouter": {
+    "message": "ReactRouter",
+    "description": "The label for category ReactRouter in sidebar react"
+  }
+}
