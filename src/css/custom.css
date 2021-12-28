@@ -45,7 +45,6 @@
   /* 选中未选中 */
   --btn-selected: var(--ifm-color-primary);
   --btn-unselected: #cecece;
-
 }
 
 .docusaurus-highlight-code-line {
@@ -59,13 +58,12 @@
   box-shadow: none;
 }
 
-.navbar__logo img{
+.navbar__logo img {
   border-radius: 50%;
   margin-left: 10px;
 }
 
-.navbar__title{
+.navbar__title {
   color: var(--ifm-color-primary);
   margin-left: 20px;
 }
-

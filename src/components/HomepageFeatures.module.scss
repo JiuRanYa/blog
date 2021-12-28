@@ -1,0 +1,33 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.mainWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+
+  .title {
+    margin-bottom: 50px;
+    flex: 1 1;
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    font-weight: 600;
+    & > span {
+      color: #338bff;
+    }
+  }
+}

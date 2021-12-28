@@ -1,102 +1,102 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: '久染',
-  tagline: 'Dinosaurs are cool',
-  url: 'http://www.siyuanwa.cn',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/home/logo.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  title: "久染",
+  tagline: "Dinosaurs are cool",
+  url: "http://www.siyuanwa.cn",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/home/logo.ico",
+  organizationName: "facebook", // Usually your GitHub org/user name.
+  projectName: "docusaurus", // Usually your repo name.
   // staticDirectories: ['public', 'static'],
   themeConfig: {
-    // SEO 
+    // SEO
     metadata: [
-      { name: '久染', content: '久染, 博客' },
-      { name: '前端', content: 'Front End' },
-      { name: '博客', content: 'blog' },
+      { name: "久染", content: "久染, 博客" },
+      { name: "前端", content: "Front End" },
+      { name: "博客", content: "blog" },
     ],
     navbar: {
-      title: '久染',
+      title: "久染",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/home/logo.ico',
+        alt: "My Site Logo",
+        src: "img/home/logo.ico",
       },
       items: [
         {
-          type: 'localeDropdown',
-          position: 'left',
+          type: "localeDropdown",
+          position: "left",
         },
         {
-          to: '/',
-          activeBasePath: 'blog',
-          label: '博客',
-          position: 'right',
+          to: "/",
+          activeBasePath: "blog",
+          label: "博客",
+          position: "right",
           items: [
             {
               label: "Javascript",
               to: "/blog/tags/Javascript",
-            }
+            },
           ],
         },
         {
-          to: 'docs/algorithm/二叉树/preorder',
-          label: '算法',
-          position: 'right',
+          to: "docs/algorithm/二叉树/preorder",
+          label: "算法",
+          position: "right",
         },
         {
-          to: 'docs/react/react-hooks',
-          label: 'React源码',
-          position: 'right',
+          to: "docs/react/react-hooks",
+          label: "React源码",
+          position: "right",
         },
         {
-          to: 'docs/resources/resources-intro',
-          label: '资源整理',
-          position: 'right',
+          to: "docs/resources/resources-intro",
+          label: "资源整理",
+          position: "right",
         },
         {
-          href: 'https://space.bilibili.com/345132581',
-          label: 'B站',
-          position: 'right',
+          href: "https://space.bilibili.com/345132581",
+          label: "B站",
+          position: "right",
         },
         {
-          href: 'https://github.com/1084350607',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/1084350607",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "Stack Overflow",
+              href: "https://stackoverflow.com/questions/tagged/docusaurus",
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: "Discord",
+              href: "https://discordapp.com/invite/docusaurus",
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: "Twitter",
+              href: "https://twitter.com/docusaurus",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
+              label: "Blog",
+              to: "blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: "GitHub",
+              href: "https://github.com/facebook/docusaurus",
             },
           ],
         },
@@ -107,29 +107,30 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            "https://github.com/facebook/docusaurus/edit/master/website/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            "https://github.com/facebook/docusaurus/edit/master/website/blog/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
   ],
   // 国际化
   i18n: {
-    defaultLocale: 'zh-cn',
-    locales: ['en', 'zh-cn'],
+    defaultLocale: "zh-cn",
+    locales: ["en", "zh-cn"],
   },
+  plugins: ["docusaurus-plugin-sass"],
 };

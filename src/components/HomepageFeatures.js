@@ -1,9 +1,9 @@
 import React from "react";
-import clsx from "clsx";
-import styles from "./HomepageFeatures.module.css";
 import { useSpring, animated } from "react-spring";
 import styled from "@emotion/styled";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import BgImage from "@site/static/img/home/bg.svg";
+import MusicUrl from "@site/static/img/home/music.svg";
+import Styles from "./HomepageFeatures.module.scss";
 
 export default function HomepageFeatures() {
   const props = useSpring({
@@ -28,53 +28,49 @@ export default function HomepageFeatures() {
   });
 
   return (
-    <MainWrapper>
-      <WelcomeTitle style={props}>
+    <div className={Styles.mainWrapper}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "end",
+          height: "calc(100vh - 60px)",
+        }}
+      >
+        <SvgBackGround />
+      </div>
+      <div style={props} className={Styles.title}>
         Welcome to
-        <span>JiuRan's Channel</span>
-      </WelcomeTitle>
-      <animated.p style={props2}>
-        Make things as simple as possible but no simpler.
-      </animated.p>
-      <StartBtn href="/docs/algorithm/二叉树/preorder" style={props3}>
-        Get Started
-      </StartBtn>
-    </MainWrapper>
+        <span>JiuRan</span>
+        's Channel
+      </div>
+      <Music></Music>
+    </div>
   );
 }
 
 const WelcomeTitle = styled(animated.h1)`
   margin-bottom: 50px;
-`;
-const StartBtn = styled(animated.a)`
-  width: 200px;
-  height: 68px;
-  color: black;
-  border: 1px solid gray;
-  text-align: center;
-  line-height: 67px;
-  font-size: 20px;
-  border-radius: 8px;
-  margin-top: 50px;
-  transition: 0.3s ease;
-  background-color: #2a9d8f;
-  color: aliceblue;
-  &:hover {
-    text-decoration: none;
-    transition: 0.3s ease;
-    color: black;
-    background-color: #fff;
+  flex: 1 1;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  & > span {
+    color: #338bff;
   }
 `;
 
-const MainWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: calc(100vh - 60px);
-  align-items: center;
-  background: ${require("/static/img/home/bgimage.jpg")};
+const SvgBackGround = styled(BgImage)`
+  height: 70%;
+  width: 50vw;
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
+`;
+
+const MainWrapper = styled.div``;
+
+const Music = styled(MusicUrl)`
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 `;

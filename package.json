@@ -20,9 +20,11 @@
     "@emotion/styled": "^11.3.0",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
+    "docusaurus-plugin-sass": "^0.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-spring": "^9.1.2"
+    "react-spring": "^9.1.2",
+    "sass": "^1.45.1"
   },
   "browserslist": {
     "production": [
