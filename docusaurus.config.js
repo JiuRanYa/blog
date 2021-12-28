@@ -9,7 +9,14 @@ module.exports = {
   favicon: 'img/home/logo.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
+  // staticDirectories: ['public', 'static'],
   themeConfig: {
+    // SEO 
+    metadata: [
+      { name: '久染', content: '久染, 博客' },
+      { name: '前端', content: 'Front End' },
+      { name: '博客', content: 'blog' },
+    ],
     navbar: {
       title: '久染',
       logo: {
