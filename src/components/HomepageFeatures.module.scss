@@ -14,7 +14,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-items: center;
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
@@ -23,11 +22,25 @@
     margin-bottom: 50px;
     flex: 1 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 3rem;
+    position: relative;
+    // bottom: 150px;
     justify-content: center;
     font-weight: 600;
-    & > span {
+    .subTitle {
+      font-size: 22px;
+      font-weight: 300;
+    }
+    & > div > span {
       color: #338bff;
+    }
+    .socialLinks {
+      & > a {
+        cursor: pointer;
+        padding-right: 26px;
+      }
     }
   }
 }
