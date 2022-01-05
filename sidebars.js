@@ -35,7 +35,7 @@ module.exports = {
       "algorithm/手写函数/ajax",
       "algorithm/手写函数/instanceof",
     ],
-    算法模板: ["algorithm/模板/quickSort"],
+    算法模板: ["algorithm/模板/quickSort", "algorithm/模板/mergeSort"],
   },
   react: {
     React: [

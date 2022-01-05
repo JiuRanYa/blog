@@ -13,7 +13,11 @@ keywords:
 # image: https://i.imgur.com/mErPwqL.png
 ---
 
-```C++
+## 一. 算法模板
+
+基于分治做排序
+
+```cpp
 void quick_sort(int ary[], int l, int r) {
     if (l >= r) return;
 

@@ -88,6 +88,7 @@ const SvgBackGround = styled(BgImage)`
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
+  margin-bottom: 20px;
 `;
 
 const Music = styled(MusicUrl)`
