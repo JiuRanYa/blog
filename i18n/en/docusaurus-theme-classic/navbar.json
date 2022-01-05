@@ -20,7 +20,7 @@
     "description": "Navbar item with label 资源整理"
   },
   "item.label.B站": {
-    "message": "Billbill",
+    "message": "Bilibili",
     "description": "Navbar item with label B站"
   },
   "item.label.GitHub": {
