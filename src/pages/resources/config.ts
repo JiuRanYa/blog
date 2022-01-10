@@ -1,4 +1,14 @@
-export const config = {
+export interface IConfigItem { 
+  title: string,
+  tags: string,
+  link: string
+}
+
+export interface IConfig {
+  '美化': IConfigItem[]
+}
+
+const config: IConfig  = {
   '美化': [
     {
       title: 'undraw',
@@ -7,3 +17,5 @@ export const config = {
     }
   ],
 }
+
+export default config;
