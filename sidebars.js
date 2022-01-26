@@ -43,6 +43,8 @@ module.exports = {
       "algorithm/模板/doublePoint",
       "algorithm/模板/qianzhuihe",
       "algorithm/模板/monotonousStack",
+
+      "algorithm/算法思维/dp",
     ],
   },
   react: {
