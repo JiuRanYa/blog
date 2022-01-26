@@ -18,7 +18,6 @@ import Link from '@docusaurus/Link';
 import MDXComponents from '@theme/MDXComponents';
 import Seo from '@theme/Seo';
 import type {Props} from '@theme/BlogPostItem';
-import ThemeContext from "@theme/ThemeContext";
 import {usePluralForm} from '@docusaurus/theme-common';
 
 //@ts-ignore
@@ -82,7 +81,6 @@ function BlogPostItem(props: Props): JSX.Element {
 
   // 是否为黑暗主题：
   // TODO: 修改黑暗主题样式
-  const theme = useContext(ThemeContext);
   // @ts-ignore
   const { isDarkTheme } = theme
 
@@ -179,7 +177,6 @@ function BlogPostItem(props: Props): JSX.Element {
                 {!isBlogPostPage && (
                   <span className="footer__read_count">
                     <Eye
-                      color={isDarkTheme ? "#76baff" : "#1e81e3"}
                       style={{ verticalAlign: "middle" }}
                       className="text-right"
                     />{" "}
