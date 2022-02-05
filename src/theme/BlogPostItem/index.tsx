@@ -79,11 +79,6 @@ function BlogPostItem(props: Props): JSX.Element {
   const month = parseInt(match[1], 10);
   const day = parseInt(match[2], 10);
 
-  // 是否为黑暗主题：
-  // TODO: 修改黑暗主题样式
-  // @ts-ignore
-  const { isDarkTheme } = theme
-
   // auth信息
   // const authorURL = frontMatter.author_url || frontMatter.authorURL;
   // const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
