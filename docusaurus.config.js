@@ -50,6 +50,11 @@ module.exports = {
           position: "right",
         },
         {
+          to: "docs/project/auth",
+          label: "工程化",
+          position: "right",
+        },
+        {
           to: "docs/react/react-hooks",
           label: "React源码",
           position: "right",

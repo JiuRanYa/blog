@@ -58,6 +58,11 @@ module.exports = {
     Redux: ["redux/redux-hoc"],
     ReactRouter: ["react-router/react-router-v6"],
   },
+  工程化: {
+    权限设计: [
+      "project/auth"
+    ]
+  }
   // But you can create a sidebar manually
   /*
   tutorialSidebar: [

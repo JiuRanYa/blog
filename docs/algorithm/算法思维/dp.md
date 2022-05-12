@@ -23,7 +23,7 @@ keywords:
 
 每件物品只能选一次，选出价值最大的物品
 
-<!-- ![img](../../static/algorithm/dp/01.png) -->
+![img](../../../static/algorithm/dp/01.png)
 
 ```cpp
 #include <iostream>
