@@ -50,6 +50,11 @@ module.exports = {
           position: "right",
         },
         {
+          to: "docs/design/table",
+          label: "技术设计",
+          position: "right",
+        },
+        {
           to: "docs/project/auth",
           label: "工程化",
           position: "right",

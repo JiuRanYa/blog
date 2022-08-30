@@ -59,10 +59,11 @@ module.exports = {
     ReactRouter: ["react-router/react-router-v6"],
   },
   工程化: {
-    权限设计: [
-      "project/auth"
-    ]
-  }
+    权限设计: ["project/auth"],
+  },
+  技术设计: {
+    Design: ["design/table"],
+  },
   // But you can create a sidebar manually
   /*
   tutorialSidebar: [
