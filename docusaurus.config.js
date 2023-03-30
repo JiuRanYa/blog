@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "久染",
-  tagline: "Dinosaurs are cool",
+  tagline: "Front-end developer JiuRan | 久染",
   url: "http://www.siyuanwa.cn",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -65,17 +65,22 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/resources/resources-intro",
-          label: "资源整理",
+          to: "docs/vue/vue-intro",
+          label: "Vue源码",
           position: "right",
         },
         {
-          href: "https://space.bilibili.com/345132581",
+          to: "docs/vim/intro",
+          label: "Vim",
+          position: "right",
+        },
+        {
+          href: "https://space.bilibili.com/1376675981",
           label: "B站",
           position: "right",
         },
         {
-          href: "https://github.com/1084350607",
+          href: "https://github.com/JiuRanYa",
           label: "GitHub",
           position: "right",
         },
