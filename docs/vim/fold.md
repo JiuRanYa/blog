@@ -9,17 +9,16 @@ title: 代码折叠
 
 在 Neovim 中，可以使用内置的代码折叠功能来折叠代码块。要启用代码折叠，请确保在您的 init.vim 或.vimrc 文件中设置了以下行：
 
-### 1.1 In vim
+### 1.1 Vim 配置
 
-```vim
-
+```bash
 set foldmethod=indent
 set foldlevel=99
 ```
 
-### 1.2 In Lua
+### 1.2 Lua 配置
 
-```
+```lua
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 ```
