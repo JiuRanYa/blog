@@ -5,64 +5,46 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useContext } from 'react';
-import clsx from 'clsx';
-import {MDXProvider} from '@mdx-js/react';
+import React from "react";
+import clsx from "clsx";
+import { MDXProvider } from "@mdx-js/react";
 import styled from "@emotion/styled";
 //@ts-ignore
 import Eye from "@site/static/icons/eye.svg";
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
-import Translate, {translate} from '@docusaurus/Translate';
-import Link from '@docusaurus/Link';
-import MDXComponents from '@theme/MDXComponents';
-import Seo from '@theme/Seo';
-import type {Props} from '@theme/BlogPostItem';
-import {usePluralForm} from '@docusaurus/theme-common';
+import { translate } from "@docusaurus/Translate";
+import Link from "@docusaurus/Link";
+import MDXComponents from "@theme/MDXComponents";
+import Seo from "@theme/Seo";
+import type { Props } from "@theme/BlogPostItem";
+import { usePluralForm } from "@docusaurus/theme-common";
 
 //@ts-ignore
-import { FlexWrapper } from '@site/src/components/lib'
-
-const MONTHS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
-
+import { FlexWrapper } from "@site/src/components/lib";
 
 // Very simple pluralization: probably good enough for now
 function useReadingTimePlural() {
-  const {selectMessage} = usePluralForm();
+  const { selectMessage } = usePluralForm();
   return (readingTimeFloat: number) => {
     const readingTime = Math.ceil(readingTimeFloat);
     return selectMessage(
       readingTime,
       translate(
         {
-          id: 'theme.blog.post.readingTime.plurals',
+          id: "theme.blog.post.readingTime.plurals",
           description:
             'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: 'One min read|{readingTime} min read',
+          message: "One min read|{readingTime} min read",
         },
-        {readingTime},
-      ),
+        { readingTime }
+      )
     );
   };
 }
 
 //@ts-ignore
 function BlogPostItem(props: Props): JSX.Element {
-  const readingTimePlural = useReadingTimePlural();
   const {
     children,
     frontMatter,
@@ -70,11 +52,11 @@ function BlogPostItem(props: Props): JSX.Element {
     truncated,
     isBlogPostPage = false,
   } = props;
-  const {date, formattedDate, permalink, tags, readingTime} = metadata;
-  const {title, image, keywords} = frontMatter;
+  const { date, permalink, tags, readingTime } = metadata;
+  const { title, image, keywords } = frontMatter;
 
   // date处理
-  const match = date.substring(0, 10).split('-');
+  const match = date.substring(0, 10).split("-");
   const year = match[0];
   const month = parseInt(match[1], 10);
   const day = parseInt(match[2], 10);
@@ -83,38 +65,40 @@ function BlogPostItem(props: Props): JSX.Element {
   // const authorURL = frontMatter.author_url || frontMatter.authorURL;
   // const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
   // const authorImageURL =
-    frontMatter.author_image_url || frontMatter.authorImageURL;
+  frontMatter.author_image_url || frontMatter.authorImageURL;
 
   // tag部分
   const renderTags = () => {
-    return(
+    return (
       <div>
         {(tags.length > 0 || truncated) && (
           <div className="col margin-vert--lg">
             {isBlogPostPage && (
-              <div className={clsx(
-                "margin-vert--md",
-                isBlogPostPage ? "text--center" : '',
-                "margin-vert--lg"
-              )}>
+              <div
+                className={clsx(
+                  "margin-vert--md",
+                  isBlogPostPage ? "text--center" : "",
+                  "margin-vert--lg"
+                )}
+              >
                 <time dateTime={date} className={styles.blogPostDate}>
-                  {year}年{month}月{day}日, {' '}
-                  推荐阅读时间:{readingTime && <> {Math.ceil(readingTime)}分钟</>}
+                  {year}年{month}月{day}日, 推荐阅读时间:
+                  {readingTime && <> {Math.ceil(readingTime)}分钟</>}
                 </time>
               </div>
             )}
 
             {tags.length > 0 && (
-              <div className={clsx(
-                "col",
-                isBlogPostPage ? "text--center" : ''
-              )}>
-                {tags.map(({label, permalink: tagPermalink}) => (
+              <div
+                className={clsx("col", isBlogPostPage ? "text--center" : "")}
+              >
+                {tags.map(({ label, permalink: tagPermalink }) => (
                   <TagStyle>
                     <Link
                       key={tagPermalink}
                       className="margin-horiz--sm"
-                      to={tagPermalink}>
+                      to={tagPermalink}
+                    >
                       {label}
                     </Link>
                   </TagStyle>
@@ -123,26 +107,34 @@ function BlogPostItem(props: Props): JSX.Element {
             )}
           </div>
         )}
-
       </div>
-    )
-  }
-
+    );
+  };
 
   // header
   const renderPostHeader = () => {
-    const TitleHeading = isBlogPostPage ? 'h1' : 'h2';
+    const TitleHeading = isBlogPostPage ? "h1" : "h2";
 
     // TODO: 添加发布时间
     return (
       <header>
         <TitleHeading
-          className={
-            clsx('margin-bottom--sm',
+          className={clsx(
+            "margin-bottom--sm",
             styles.blogPostTitle,
             isBlogPostPage ? "text--center" : ""
-            )}>
-          {isBlogPostPage ? title : <Link style={{textDecoration: "none", color: "black"}} to={permalink}>{title}</Link>}
+          )}
+        >
+          {isBlogPostPage ? (
+            title
+          ) : (
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={permalink}
+            >
+              {title}
+            </Link>
+          )}
         </TitleHeading>
       </header>
     );
@@ -150,9 +142,9 @@ function BlogPostItem(props: Props): JSX.Element {
 
   return (
     <>
-      <Seo {...{title, keywords, image}} />
+      <Seo {...{ title, keywords, image }} />
 
-      <article className={!isBlogPostPage ? 'margin-bottom--xl' : undefined}>
+      <article className={!isBlogPostPage ? "margin-bottom--xl" : undefined}>
         {renderPostHeader()}
         {renderTags()}
         <div className="markdown">
@@ -166,7 +158,7 @@ function BlogPostItem(props: Props): JSX.Element {
                   to={metadata.permalink}
                   aria-label={`Read more about ${title}`}
                 >
-                  {!isBlogPostPage && (<strong>阅读原文</strong>)}
+                  {!isBlogPostPage && <strong>阅读原文</strong>}
                 </ReadMoreBtn>
 
                 {!isBlogPostPage && (
@@ -191,32 +183,32 @@ const ReadMoreBtn = styled(Link)`
   color: white; */
   border-radius: 8px;
   background: linear-gradient(
-          90deg,
-          var(--ifm-color-primary),
-          var(--ifm-color-primary-dark)
+    90deg,
+    var(--ifm-color-primary),
+    var(--ifm-color-primary-dark)
   );
   color: white;
   padding: 0.75em 2em;
   margin-top: 50px;
   border-radius: 4px;
-  box-shadow: 0 0 32px rgba(0,105,165,.35);
+  box-shadow: 0 0 32px rgba(0, 105, 165, 0.35);
   text-decoration: none;
-`
+`;
 
 const TagStyle = styled.div`
-    display: inline-block;
-    text-align: center;
-    padding: 1px 0;
-    margin: 0 10px;
-    border-radius: 6px;
-    background-color: rgba(0,179,255,.09019607843137255);
-    &:first-child{
-        margin-left: 0;
-    }
-    .margin-horiz--sm{
-        color: #5d89e2;
-        font-size: 15px;
-    }
-`
+  display: inline-block;
+  text-align: center;
+  padding: 1px 0;
+  margin: 0 10px;
+  border-radius: 6px;
+  background-color: rgba(0, 179, 255, 0.09019607843137255);
+  &:first-child {
+    margin-left: 0;
+  }
+  .margin-horiz--sm {
+    color: #5d89e2;
+    font-size: 15px;
+  }
+`;
 
 export default BlogPostItem;
