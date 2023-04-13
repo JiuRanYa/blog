@@ -68,6 +68,9 @@ module.exports = {
   技术设计: {
     Design: ["design/table"],
   },
+  摄影: {
+    焦距: ["photography/photography-jiaoju"],
+  },
   // But you can create a sidebar manually
   /*
   tutorialSidebar: [

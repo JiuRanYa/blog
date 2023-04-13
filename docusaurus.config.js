@@ -55,23 +55,18 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/project/auth",
-          label: "工程化",
-          position: "right",
-        },
-        {
           to: "docs/react/react-hooks",
           label: "React源码",
           position: "right",
         },
         {
-          to: "docs/vue/vue-intro",
-          label: "Vue源码",
+          to: "docs/vim/intro",
+          label: "Vim",
           position: "right",
         },
         {
-          to: "docs/vim/intro",
-          label: "Vim",
+          to: "docs/photography/photography-jiaoju",
+          label: "摄影",
           position: "right",
         },
         {
